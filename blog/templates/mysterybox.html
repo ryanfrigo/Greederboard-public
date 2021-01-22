@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<center>
+<h1>stOAKed Mystery Box</h1>
+<div>
+        {% load static %}
+        <img src="{% static "images/stoaked_mystery_box.gif" %}" alt="stOAKed MYSTERY BOX" style="max-width: 300px; height:300px; padding: 30px;"/>
+</div>
+<div>
+    <p>
+        * get a different tee, hoodie or hat every month<br />
+        * chance to receive discontinued items<br />
+        * exclusive products<br />
+        * super mysterious<br />
+        * may contain ghosts<br /><br />
+        $30<br /><br /><br />
+    </p>
+</div>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="TTN6LUH5BNP7S">
+    <table>
+        <tr>
+            <td><input type="hidden" name="on0" value="Size">Size</td>
+        </tr>
+        <tr>
+            <td><select name="os0">
+                    <option value="S">S </option>
+                    <option value="M">M </option>
+                    <option value="L">L </option>
+                    <option value="XL">XL </option>
+                </select> </td>
+        </tr>
+    </table>
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0"
+        name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+</center>
+
+{% endif %}
+{% endblock %}

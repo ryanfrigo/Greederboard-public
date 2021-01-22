@@ -1,0 +1,10 @@
+.center{
+    text-align:center;
+    color: black
+}
+body {background: blue}
+#space-invaders {
+  margin: 0 auto;
+  display: block;
+  background: blue
+}

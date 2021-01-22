@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% block title %}<title>Chuang Zhu Project</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen Mono' rel='stylesheet'>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="icon" href="{% static 'mages/favicon.ico' %}">
+</head>
+
+<body>
+    <!-- <audio autoplay preload="auto" style=" width:300px;">
+        <source src="https://www.dropbox.com/s/zv5k0iy2kin0v70/goingup.mp3?dl=1" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio><br /> -->
+
+    <script>
+        var div = document.createElement('div');
+        div.style.height = '100vh'
+        document.body.appendChild(div)
+        div.addEventListener('mousemove', function(event){
+            var x = event.clientX,
+                y = event.clientY;
+                div.style.backgroundColor = 'rgb(' + x/5 + ', ' + y/5 + ', +100)'
+                // div.style.backgroundColor = 'rgb(' + x + ', +20, ' + y + ')'
+        })
+    </script>
+
+    <div class="nav">
+        <center>
+            <!-- <img class=rotate3 src="{% static "images/Asset1.png" %}" alt="Chuang Zhu Project"
+                style="max-width:300px;height:60px;padding:5px;" /> -->
+            <h3 class="rotate3"><a href="{% url 'projects' %}">Ryan Frigo</a></h3>
+            <p>
+                <a href="{% url 'projects' %}">projects</a> * 
+                <a href="{% url 'about' %}">about</a>
+            </p>
+        </center>
+    </div>
+    {% block content %}{% endblock %}
+</body>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greederboard BETA</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <h1>Greederboard BETA</h1>
+    <canvas id="network" width="1000" height="500"></canvas>
+    {% load static %}
+    <script src="{% static 'js/beta.js' %}"></script>
+    <script>
+        var data = "{% static 'data/data.json' %}"
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    /* margin-right: 100px;
+    margin-top: 10px; */
+    text-align: center;
+    background-color: #3B3B7F;
+    font-family: 'Oxygen Mono';font-size: 22px;
+}
+
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 5px;
+    list-style: none;
+    margin: auto;
+    width: 50%;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.col-sm-10 {
+    background-color: darkcyan;
+    border-style: dotted dashed solid double;
+    border-color: green;
+    margin-top: 50px;
+}
+
+h1 {
+    color:white;
+}
+
+h2 {
+    color:white;
+}
+
+h3 {
+    color:white;
+}
+
+p {
+    color: white;
+}

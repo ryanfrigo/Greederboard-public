@@ -1,0 +1,10 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 5px;
+    list-style: none;
+    margin: auto;
+    width: 50%;
+    border: 2px solid red;
+    text-align: center;
+}
+

@@ -1,0 +1,9 @@
+psycopg2-binary
+Django==2.1.7
+django-heroku==0.3.1
+gunicorn
+django-ip-restriction==1.1.1
+requests
+bs4
+pandas
+

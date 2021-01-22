@@ -1,0 +1,164 @@
+<!-- oh, hey there... if you want to help us build Greederboard, please email us at greederboard@protonmail.com! ;) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% block title %}<title>Greederboard.</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Playfair+Display&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+    <script>
+        var background = document.createElement('div');
+        background.style.height = '100vh'
+        document.body.appendChild(background)
+        background.addEventListener('mousemove', function (event) {
+            var x = event.clientX,
+                y = event.clientY;
+            background.style.backgroundColor = 'rgb(' + x / 5 + ', ' + y / 5 + ', +100)'
+        })
+        var h = document.createElement("H1");
+        var gb_text = document.createTextNode("Greederboard.");
+        h.appendChild(gb_text);
+        background.appendChild(h)
+    </script>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: #3C455C;">
+        <center>
+            <div class="center">
+                <img class="rotate3" src="{% static "images/coin-3.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 100px;padding: 50px;" />
+                
+                <h3 class="hidden">
+                    In 2018, 3.45 billion U.S. dollars were spent on lobbying.
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: #6D7973;">
+        <center>
+            <div class="center">
+                <img class="hidden" src="{% static "images/vault.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 100px;padding: 50px;" />
+
+                <h3 class="hidden">
+                    Lobbying represents the interests of the largest
+                    corporations and is driven primarily by corporate greed.
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: #3C455C;">
+        <center>
+            <div class="center">
+                <img class="hidden" src="{% static "images/podium.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 111px;padding: 50px;" />
+
+                <h3 class="hidden">
+                    Since this is a legal form of corruption, 
+                    it's impossible to hold businesses and politicians accountable 
+                    for what they say and how they affect the future of humanity.
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: #B37C57;">
+        <center>
+            <div class="center">
+                <img class="hidden" src="{% static "images/map.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 100px;padding: 50px;" />
+                <h3 class="hidden">
+                    Greederboard aims to offer a free and unbiased
+                    platform for the American voter to explore
+                    the relationships between politicians,
+                    lobbyists, corporations, and our legislation.
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: #7CAA98;">
+        <center>
+            <div class="center">
+                <img class="rotate2d" src="{% static "images/globe.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 100px;padding: 50px;" />
+                <h3 class="hidden">
+                    Our mission is to deliver transparency to the American voter
+                    by providing metrics based only on public financial and political data.<br><br>
+
+                    We hope that Greederboard can help people see through the flurry of media and derive a more accurate picture of our political system in real time.<br><br>
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <div style="height:10px;"></div>
+
+    <div class="hidden page" style="background-color: rgb(117, 59, 83);">
+        <center>
+            <div class="center">
+                <img class="hidden" src="{% static "images/politicians.svg" %}" alt="Greederboard."
+                    style="max-width: 300px;height: 100px;padding: 50px;" />
+                <h3 class="hidden">
+                    If you want to help protect our democracy,
+                    <a href=mailto:greederboard@protonmail.com>reach out</a> and help us build Greederboard v1.<br><br>
+                </h3>
+            </div>
+        </center>
+    </div>
+
+    <script>
+            (function () {
+                var elements;
+                var windowHeight;
+
+                function init() {
+                    elements = document.querySelectorAll('.hidden');
+                    windowHeight = window.innerHeight;
+                }
+
+                function checkPosition() {
+                    for (var i = 0; i < elements.length; i++) {
+                        var element = elements[i];
+                        var positionFromTop = elements[i].getBoundingClientRect().top;
+
+                        if (positionFromTop - windowHeight <= -100) {
+                            element.classList.add('fade-in-element');
+                            element.classList.remove('hidden');
+                        }
+                    }
+                }
+
+                window.addEventListener('scroll', checkPosition);
+                window.addEventListener('resize', init);
+
+                init();
+                checkPosition();
+            })();
+    </script>
+    
+</body>

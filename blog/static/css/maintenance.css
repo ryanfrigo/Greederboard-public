@@ -1,0 +1,159 @@
+body {
+    background-color: #b3b3b3;
+    /* background-color: lightgrey; */
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 13px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    color: white;
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+
+}
+
+p {
+    color: white;
+    font-size: 14px;
+}
+
+span {
+    color: white;
+    font-size: 13px;
+}
+
+.page {
+  height: 100vh;
+}
+
+.center {
+  position: relative;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10%;
+}
+
+.nav {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.footer {
+  position: fixed;
+  top: 95%;
+  left: 5%;
+  transform: translate(-30%, -50%);
+  font-size: 7px;
+}
+
+a {
+  color: white;
+}
+
+.fade {
+    opacity: 0;
+    animation: fade 5s infinite linear;
+    animation-delay: 1s;
+}
+@keyframes fade {
+  0% { opacity: 0 }
+  50%,100% { opacity: 1 }
+}
+
+.rotate{
+
+ -webkit-animation: rotateX 2s infinite ease;
+  animation: rotateX 5s infinite ease;
+  animation-delay: 1s;
+}
+@-webkit-keyframes rotateX {
+  to { -webkit-transform: rotateX(90deg); }
+}
+@keyframes rotateX {
+  to { transform: rotateX(90deg); }
+}
+
+.rotate2{
+
+ -webkit-animation: rotateY 8s infinite ease-out;
+  animation: rotateY 5s infinite ease-out;
+  animation-delay: 0.0s;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateX(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateX(360deg); }
+}
+
+.rotate3{
+  
+ -webkit-animation: rotateY 2s infinite linear;
+  animation: rotateY 12s infinite linear;
+}
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
+
+.rotate2d {
+    -webkit-animation:spin 14s linear infinite;
+    -moz-animation:spin 14s linear infinite;
+    animation:spin 14s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.border{
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+
+
+/* fade in when scrolled into view */
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+  animation: fade-in 1.4s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.page-spacer {
+  height: 3px;
+}

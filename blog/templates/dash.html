@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greederboard BETA</title>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Playfair+Display&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    {% load static %}
+    <script src="{% static 'js/dash.js' %}"></script>
+    <link rel="stylesheet" href="{% static "css/dash.css" %}">
+</head>
+<main>
+    <div>
+    <h1>Greederboard</h1>
+    <center>
+    <p><span style="color:#4fcc29;">YTD Gain</span> is in green.</p>
+    <p><span style="color:#dd2323;">YTD Loss</span> is in red.</p></p>
+    <p>"Greed" is defined simply as net worth.</p>
+    <p>Zoom in by dragging, zoom out by right clicking.</p>
+    <p>Should update daily.</p>
+    </div>
+    <div id="greederboard"></div>
+    <center>
+	<p>© Greederboard 2021. Created by <a href='https://ryanfrigo.com'>Ryan Frigo</a>.</p>
+    <li><p>Sources:</p></li>
+    <li><a href='https://www.bloomberg.com/billionaires/'>Bloomberg Billionaires Index</a></li>
+    <li><a href='https://web.archive.org/web/20191023104250/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/research/publications/global-wealth-databook-2019.pdf'>Credit Suisse Global Wealth Report</a></li>
+    <li><a href='https://en.wikipedia.org/wiki/List_of_countries_by_wealth_per_adult'>List of countries by wealth per adult</a></li>
+    <li><a href='https://www.federatedinvestors.com/products/mutual-funds/us-treasury-cash-reserves/is.do'>US Treasury Cash Reserves</a></li>
+</main>

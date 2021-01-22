@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+main {
+  width: 99%;
+  margin: 10px auto;
+  padding: 10px;
+  background: black;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  font-family: 'Arial', monospace;
+  font-size: 13px;
+}
+
+#greederboard {
+  width: 90%;
+  height: 10000px;
+  position: relative;
+  top: 10px;
+  margin: auto;
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+p {
+    color: white;
+    font-size: 14px;
+}
+
+a {
+    color: white;
+    font-size: 14px;
+}

@@ -10,4 +10,4 @@ CSS
 HTML
 Heroku
 
-There's a lot of unnecessary code here from playing around and trying different things over the months. I'll try to loop back at some point to clean it up ;)
+There's a lot of unnecessary code here from playing around and trying different things out
